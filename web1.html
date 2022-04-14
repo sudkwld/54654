@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::짱구몰:: 즐거운 온라인 쇼핑공간</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        il,
+        ol {
+            list-style: none;
+        }
+
+        header {
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        #list {
+            width: 300px;
+            height: 150px;
+            float: left;
+            margin: 20px 0 0 0;
+        }
+
+        #list ul {
+            font-size: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        #list ul li {
+            float: right;
+            margin: 40px 12px 12px 0px;
+        }
+
+        #list ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        #logo {
+            width: 300px;
+            height: 130px;
+            float: left;
+        }
+
+        #logo>a>img {
+            width: 200px;
+            height: 80px;
+            margin: 40px 0px 0 160px;
+        }
+
+        #icon {
+            width: 400px;
+            height: 150px;
+            float: right;
+        }
+
+        #icon>.setting {
+            width: 80px;
+            height: 80px;
+            display: inline;
+        }
+
+        #icon>.setting>a>img {
+            width: 80px;
+            height: 80px;
+            margin: 50px 0 0 0;
+            border:1px solid rgb(224, 224, 224);
+        }
+
+        nav {
+            width: 1200px;
+            height: 50px;
+            float: right;
+        }
+
+        nav>ul {
+            font-size: 13px;
+        }
+
+        nav>ul>li {
+            margin: 5px 10px 5px 5px;
+            float: left;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+            color: #000;
+            opacity: 0.7;
+        }
+
+        nav>ul>li>a:hover {
+            opacity: 1;
+            transition: all 0.5s;
+        }
+
+        #slider {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        #slider>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        section {
+            width: 1200px;
+            height: 1600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: black;
+            text-align: center;
+            margin: 25px 0 0 0;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+        }
+
+        #recommendation {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+        }
+
+        #recommendation>.box {
+            width: 230px;
+            height: 320px;
+            display: block;
+            float: left;
+            margin: 20px 10px 20px 50px;
+        }
+
+        #recommendation>.box>a>img {
+            width: 100%;
+            height: 250px;
+            opacity: 1;
+        }
+
+        #recommendation>.box>a>img:hover {
+            transition: all 0.5s;
+            opacity: 0.7;
+        }
+
+        #recommendation>.box>h4 {
+            padding: 5px;
+        }
+
+        #recommendation>.box>h4>a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        #recommendation>.box>h5 {
+            padding: 5px;
+        }
+
+        #recommendation>.box>h5>a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #product {
+            width: 300px;
+            height: 800px;
+            float: left;
+        }
+
+        #product>h3 {
+            font-size: 30px;
+            float: left;
+            margin: 20px 0 0 0;
+            color: black
+        }
+
+        #product>p {
+            font-size: 13px;
+            float: left;
+            margin: 15px 0 0 0;
+            color: gray;
+        }
+
+        #product>span {
+            float: left;
+            border-radius: 5px;
+            margin: 15px 5px 0 0;
+        }
+
+        #product>span>a {
+            text-decoration: none;
+            display: inline;
+            background-color: rgb(219, 219, 219);
+            color: gray;
+            font-size: 10px;
+            padding: 5px;
+        }
+
+        #timedeal {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+        }
+
+        #timedeal>.box>a>img {
+            width: 100%;
+            height: 250px;
+            opacity: 1;
+        }
+
+        #timedeal>.box>a>img:hover {
+            transition: all 0.5s;
+            opacity: 0.7;
+        }
+
+        #timedeal>.box>h4 {
+            text-align: center;
+            margin: 10px 0 0 10px;
+            font-size: 14px;
+            padding: 5px;
+        }
+
+        #timedeal>.box>h4>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #timedeal>.box>h5 {
+            text-align: center;
+            margin: 10px 0 0 10px;
+            font-size: 14px;
+            padding: 5px;
+
+        }
+
+        #timedeal>.box>h5>a {
+            text-decoration: none;
+            color: #666;
+        }
+
+
+        #timedeal>.box {
+            width: 230px;
+            height: 320px;
+            display: block;
+            float: left;
+            margin: 20px 10px 20px 50px;
+        }
+
+        footer {
+            width: 100%;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        footer>.a {
+            width: 500px;
+            height: 50px;
+            float: left;
+        }
+
+        footer>.a>ul {
+            font-size: 12px;
+        }
+
+        footer>.a>ul>li {
+            float: left;
+            margin: 5px 5px;
+        }
+
+        footer>.a>ul>li>a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        footer>.b {
+            width: 500px;
+            height: 50px;
+            float: right;
+        }
+
+        footer>.b>ul {
+            font-size: 12px;
+        }
+
+        footer>.b>ul>li {
+            float: right;
+            margin: 5px 5px;
+        }
+
+        footer>.b>ul>li>a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        #center {
+            width: 400px;
+            height: 150px;
+            float: left;
+            display: block;
+        }
+
+        #center>h1 {
+            font-size: 20px;
+            color: #000;
+        }
+
+        #center>h4 {
+            font-size: 14px;
+            color: #000;
+        }
+
+        #center>p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #account {
+            width: 400px;
+            height: 150px;
+            float: left;
+            display: block;
+        }
+
+        #account>h4 {
+            font-size: 14px;
+            color: #000;
+            margin: 20px 0 0 0;
+        }
+
+        #account>p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #return {
+            width: 400px;
+            height: 150px;
+            float: right;
+            display: block;
+        }
+
+        #return>h4 {
+            font-size: 14px;
+            color: #000;
+            margin: 20px 0 0 0;
+        }
+
+        #return>p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #last {
+            background-color: rgb(224, 224, 224);
+            width: 1200px;
+            height: 100px;
+            display: block;
+            float: left;
+        }
+
+        #last>p {
+            font-size: 12px;
+            color: #666;
+            float: left;
+            margin: 30px 0 0 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <div id="list">
+            <ul>
+                <li><a href="#">인기상품</a></li>
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">실속상품</a></li>
+            </ul>
+        </div>
+
+        <div id="logo">
+            <a href="#"><img src="img/logo.png" alt="로고"></a>
+        </div>
+
+        <div id="icon">
+            <div class="setting">
+                <a href="#"><img src="img/search.png" alt="돋보기"></a>
+            </div>
+
+            <div class="setting">
+                <a href="#"><img src="img/my_page.png" alt="마이페이지"></a>
+            </div>
+
+            <div class="setting">
+                <a href="#"><img src="img/cart.png" alt="장바구니"></a>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">TIME SALE</a></li>
+                <li>|</li>
+                <li><a href="#">샐러드용채소</a></li>
+                <li>|</li>
+                <li><a href="#">쌈채소</a></li>
+                <li>|</li>
+                <li><a href="#">베이비채소,새싹채소</a></li>
+                <li>|</li>
+                <li><a href="#">루꼴라,바질,허브류</a></li>
+                <li>|</li>
+                <li><a href="#">요리채소</a></li>
+                <li>|</li>
+                <li><a href="#">과일,버섯,일반채소</a></li>
+                <li>|</li>
+                <li><a href="#">식용꽃</a></li>
+                <li>|</li>
+                <li><a href="#">건강채소</a></li>
+                <li>|</li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="slider">
+        <img src="img/slider.png" alt="슬라이더">
+    </div>
+
+    <section>
+        <div id="recommendation">
+            <h2>
+                MD'SRECOMMENDATION
+            </h2>
+            <p>MD가 자신있게 추천드리는 상품입니다</p>
+            <div class="box">
+                <a href="#"><img src="img/바질.png" alt="바질"></a>
+                <h4><a href="#">바질(100g)</a></h4>
+                <hr>
+                <h5><a href="#">5,500원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/와일드루꼴라.png" alt="와일드루꼴라"></a>
+                <h4><a href="#">와일드루꼴라(500g)</a></h4>
+                <hr>
+                <h5><a href="#">7,500원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/식용꽃.png" alt="식용꽃"></a>
+                <h4><a href="#">식용꽃(먹는꽃)30송이</a></h4>
+                <hr>
+                <h5><a href="#">3,000원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/루꼴라.png" alt="루꼴라"></a>
+                <h4><a href="#">루꼴라(실속형1kg)</a></h4>
+                <hr>
+                <h5><a href="#">12,800원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/프리세.png" alt="프리셰"></a>
+                <h4><a href="#">프리셰(500g)</a></h4>
+                <hr>
+                <h5><a href="#">4,7000원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/루꼴라실속.png" alt="루꼴라실속"></a>
+                <h4><a href="#">루꼴라(실속형500g)</a></h4>
+                <hr>
+                <h5><a href="#">7,400원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/루꼴라실속.png" alt="루꼴라실속250"></a>
+                <h4><a href="#">루꼴라(실속형250g)</a></h4>
+                <hr>
+                <h5><a href="#">4,500원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/루꼴라실속.png" alt="루꼴라실속100"></a>
+                <h4><a href="#">루꼴라(실속형100g)</a></h4>
+                <hr>
+                <h5><a href="#">2,000원</a></h5>
+            </div>
+        </div>
+
+        <div id="product">
+            <h3>TIME DEAL<br>PRODUCTS</h3>
+            <p>지금이 아니면 이 가격에 살수 없어요!!</p>
+            <span><a href="#">#눈물의가격</a></span>
+            <span><a href="#">사장님이</a></span>
+            <span><a href="#">미쳤어요</a></span>
+        </div>
+        <div id="timedeal">
+            <div class="box">
+                <a href="#"><img src="img/와일드루꼴라.png" alt="와일드루꼴라"></a>
+                <h4><a href="#">와일드루꼴라(1kg)</a></h4>
+                <hr>
+                <h5><a href="#">13,000원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/아스파라거스.png" alt="아스파라거스"></a>
+                <h4><a href="#">아스파라거스(1kg)</a></h4>
+                <hr>
+                <h5><a href="#">29,000원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/모듬새싹.png" alt="모듬새싹"></a>
+                <h4><a href="#">모듬새싹(500g)</a></h4>
+                <hr>
+                <h5><a href="#">6,500원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/특수야채모듬셋트.png" alt="특수야채모듬셋트"></a>
+                <h4><a href="#">특수야채 모듬셋트(500g)</a></h4>
+                <hr>
+                <h5><a href="#">7,800원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/바질.png" alt="바질"></a>
+                <h4><a href="#">바질(10g)</a></h4>
+                <hr>
+                <h5><a href="#">1,500원</a></h5>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="img/루꼴라실속.png" alt="루꼴라실속300"></a>
+                <h4><a href="#">루꼴라(실속형3kg)</a></h4>
+                <hr>
+                <h5><a href="#">루꼴라 잎입니다<br>38,000원</a></h5>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="a">
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li>|</li>
+                <li><a href="#">GUIDE</a></li>
+                <li>|</li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li>|</li>
+                <li><a href="#">AGREENMENT</a></li>
+            </ul>
+        </div>
+
+        <div class="b">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li>|</li>
+                <li><a href="#">GO TO TOP</a></li>
+            </ul>
+        </div>
+
+        <div id="center">
+            <h1>CS CENTER</h1>
+            <h4>031-332-4497</h4>
+            <p>MON-FRI AM 09:00-PM5:00 / LUNCH PM 11:30-PM 1:00<br>DAY OFF - SAT,SUN,HOLIDAY OFF</p>
+        </div>
+
+        <div id="account">
+            <h4>ACCOUNT INFO</h4>
+            <p>기업은행 : 524-040862-01-017 / 예금주 : 농업회사법인짱구올주식회사<br>이메일 : racer7474@naver.com</p>
+        </div>
+
+        <div id="return">
+            <h4>RETURN / EXCHANGE</h4>
+            <p>경기도 용인시 처인구 포곡읍 선장1로 102번길 13-10<br>자세한 사항은 문의게시판 혹은 공지사항을 참고해주세요</p>
+        </div>
+
+        <div id="last">
+            <p>COMPANY:농업회사법인짱구몰주식회사 / OWNER:오태석/ADDREE:17022 경기도 용인시 처인구 포곡읍 선장1로102번길 13-10 / TEL :
+                031-332-4497/FAX:031-338-4497<br>BUSINESS LICENSESE:378-87-00321[사업자정보확인] / CHIEF PRIVACY OFFICER
+                :오태석(racer7474@naver.com) / E-COMMERCE PERMIT NO : 제2020-용인처인-0888호<br></p>
+            <p>COPYRIGHT BY 농업회사법인짱구몰주식회사 ALL RIGHTS RESERVED by 카페24(주)</p>
+        </div>
+    </footer>
+</body>
+
+</html>
